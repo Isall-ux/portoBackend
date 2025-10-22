@@ -2,8 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const path = require("path");
 
-const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+const spotifyRouter = require("./routes/spotify");
 
 const app = express();
 
@@ -13,8 +12,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.use("/api", indexRouter);
-app.use("/api/users", usersRouter);
+app.use("/api/spotify", spotifyRouter);
+
 
 // Catch 404 (Not Found)
 app.use((req, res, next) => {

@@ -1,9 +1,9 @@
 
 const spotifyService = require("../services/spotifyService");
 
-exports.example = async (req, res, next) => {
+exports.spotifyToken = async (req, res, next) => {
   try {
-    const data = await spotifyService.example();
+    const data = await spotifyService.spotifyToken();
     res.json({ success: true, data });
   } catch (err) {
     next(err);
