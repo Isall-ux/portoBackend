@@ -2,7 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const path = require("path");
 
-const spotifyRouter = require("./routes/spotify");
+const { router: spotifyRouter } = require('./routes/spotifyAuth'); 
 
 const app = express();
 
